@@ -6,31 +6,28 @@ using System.Threading.Tasks;
 
 namespace Logical_Program
 {
-    public class PerfectNumber
+    public class PrimeNumber
     {
-       
-            public void Perfect()
+        public void Prime()
+        {
+            int num = 8, count = 0;
+            for (int i = 1; i <= num; i++)
             {
-                int number = 28, sum = 0;
+                if (num % i == 0)
+                {
+                    count++;
+                }
 
-                for (int i = 1; i <= number / 2; i++)
-                {
-                    if (number % i == 0)
-                    {
-                        sum += i;
-                    }
-                }
-                if (sum == number)
-                {
-                    Console.WriteLine("A perfect Number \n");
-
-                }
-                else
-                {
-                    Console.WriteLine("Not a Perfect Number \n");
-                }
             }
-        
+            if (count == 2)
+            {
+                Console.WriteLine("Number is Prime Number \n");
+            }
+            else
+            {
+                Console.WriteLine("Number is not Prime Number \n");
+            }
+        }
     }
 }
 
