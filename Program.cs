@@ -11,6 +11,8 @@ namespace Logical_Program
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Logical Prgram");
+            FibonicSeries fibonic = new FibonicSeries();
+            fibonic.Series();
         }
     }
 }
