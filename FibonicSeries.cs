@@ -6,25 +6,31 @@ using System.Threading.Tasks;
 
 namespace Logical_Program
 {
-    internal class FibonicSeries
+    public class PerfectNumber
     {
-        public void Series()
-        {
-            int firstNum = 0;
-            int secondNum = 1;
-            int thirdNum;
-
-            Console.WriteLine(firstNum + "\t" + secondNum);
-            for (int i = 3; i <= 10; i++)
+       
+            public void Perfect()
             {
-                thirdNum = firstNum + secondNum;
+                int number = 28, sum = 0;
 
-                Console.Write("\t" + thirdNum);
-                firstNum = secondNum;
-                secondNum = thirdNum;
+                for (int i = 1; i <= number / 2; i++)
+                {
+                    if (number % i == 0)
+                    {
+                        sum += i;
+                    }
+                }
+                if (sum == number)
+                {
+                    Console.WriteLine("A perfect Number \n");
+
+                }
+                else
+                {
+                    Console.WriteLine("Not a Perfect Number \n");
+                }
             }
-            Console.ReadKey();
-        }
+        
     }
 }
 
